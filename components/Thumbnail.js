@@ -1,11 +1,16 @@
 import Image from "next/image";
 import { HandThumbUpIcon } from "@heroicons/react/24/outline";
+import { forwardRef } from "react";
 
-function Thumbnail({ result }) {
+// eslint-disable-next-line react/display-name
+const Thumbnail = forwardRef(({ result }, ref) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
   return (
     // Thumbnail Section
-    <section className="group transform cursor-pointer p-2 transition duration-200 ease-in hover:z-50 sm:hover:scale-105">
+    <section
+      ref={ref}
+      className="group transform cursor-pointer p-2 transition duration-200 ease-in hover:z-50 sm:hover:scale-105"
+    >
       {/* Image */}
       <Image
         layout="responsive"
@@ -32,5 +37,5 @@ function Thumbnail({ result }) {
       </div>
     </section>
   );
-}
+});
 export default Thumbnail;
