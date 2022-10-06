@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Rebuilding Hulu
+Recreating the front-end of one of the most popular video on demand services, Hulu (currently over [46 million paying users](https://www.statista.com/statistics/258014/number-of-hulus-paying-subscribers/)).
 
-## Getting Started
+**Link to project:** https://hulu-kappa-mauve.vercel.app/
 
-First, run the development server:
+<img width="1402" alt="CleanShot 2022-10-06 at 22 16 05@2x" src="https://user-images.githubusercontent.com/102596893/194399656-e76cc1f1-cd8c-491e-b6e4-ebc0c4d63c0b.png">
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## How It's Made:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+**Tech used:** ReactJS, NextJS, TailwindCSS, The Movie Database (TMBD) API
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Lessons Learned:
 
-## Learn More
+* Setting up a modern project using React, Next and Tailwind
+* Building a fully responsive application with Tailwind (mobile, tablet, monitor and 4k+)
+* Creating icon animations using Tailwind
+* Creating a fading-out effect for overflowing movie navigation bar items with the help of the "tailwind-scrollbar-hide" npm package
+* Creating a small fade-in effect when switching between pages with the help of the "react-flip-move" npm package
+* Using NextJS to load our fetched movies on the server-side and optimize overall user performance
+* Using NextJS's lazy image loading feature
+* Using NextJS's routing features
+* Working with environment variables
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Optimizations: 
+**Convert the build into a fullstack application**
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+* Create a sign-in/sign-up flow
+* Save, retrieve and create lists of favorited movies for authenticated users
+* Create individual movie pages where the movie trailer is shown using the Youtube API
+* Enable authenticated users to share their individual favourited movie list
